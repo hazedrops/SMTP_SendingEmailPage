@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./build/style.css">
+  <title>Send Email</title>
+  <script src='https://smtpjs.com/v3/smtp.js'></script>  
+</head>
+<body class='flex flex-col justify-center items-center h-screen'>  
+  <h1 class="text-4xl mb-5 w-6/12 text-center">Send Email Test with Tailwind Styling</h1>
+  <form method="post" class='bg-white shadow-md border rounded px-8 pt-6 pb-8 mb-4 w-6/12'>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+        Name
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="name" placeholder="Name" autocomplete="off">
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+        Email
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" id="email" placeholder="Email" autocomplete="off">
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">
+        Subject
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="subject" placeholder="Subject" autocomplete="off">
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+        Message
+      </label>
+      <textarea class="form-textarea shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline rounded" placeholder="Message" id="body" cols="30" rows="15"></textarea>
+    </div>
+
+    <div class="flex items-center justify-between">
+      <button
+        class="w-full bg-slate-400 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button"
+        id="sendBtn">
+        Send
+      </button>
+    </div>
+  </form>
+
+  <script src='script.js'></script>
+</body>
+</html>
